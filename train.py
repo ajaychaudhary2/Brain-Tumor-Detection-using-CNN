@@ -3,9 +3,8 @@ from model_builder import build_model
 import os
 
 # Set your dataset path
-data_dir = os.path.join('Data', 'Training')  # G:/DL_project/Brain Tumor Detection using CNN/Data/Training
+data_dir = os.path.join('Data', 'Training')  
 
-# Initialize ImageDataGenerator with rescaling and validation split
 datagen = ImageDataGenerator(
     rescale=1./255,
     validation_split=0.2  # 80% train, 20% validation
@@ -32,7 +31,7 @@ val_data = datagen.flow_from_directory(
 )
 
 # Build and train model
-model = build_model(num_classes=train_data.num_classes)
+model = build_model(num_classes=train_data.num_class)
 
 model.fit(
     train_data,
