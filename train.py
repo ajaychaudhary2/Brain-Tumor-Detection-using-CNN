@@ -36,7 +36,7 @@ model = build_model(num_class=train_data.num_classes)
 model.fit(
     train_data,
     validation_data=val_data,
-    epochs=10
+    epochs=30
 )
 
 # Save the model
