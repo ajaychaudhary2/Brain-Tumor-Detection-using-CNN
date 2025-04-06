@@ -31,7 +31,7 @@ val_data = datagen.flow_from_directory(
 )
 
 # Build and train model
-model = build_model(num_classes=train_data.num_class)
+model = build_model(num_class=train_data.num_classes)
 
 model.fit(
     train_data,
