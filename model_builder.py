@@ -19,7 +19,7 @@ def build_model(input_shape=(224,224,3),num_class=4):
     
     output = Dense(num_class,activation='softmax')(x)
     
-    model = Model(input=base_model.input,outputs=output)
+    model = Model(inputs=base_model.input,outputs=output)
     
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
     
