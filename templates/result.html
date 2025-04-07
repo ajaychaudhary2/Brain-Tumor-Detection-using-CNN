@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f2f6fa;
+            text-align: center;
+            padding: 40px;
+        }
+        .result-box {
+            background-color: #ffffff;
+            padding: 30px;
+            margin: auto;
+            width: 500px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+        }
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        .prediction, .confidence, .message {
+            font-size: 1.2rem;
+            color: #34495e;
+            margin-top: 15px;
+        }
+        .message {
+            font-weight: bold;
+            color: #27ae60;
+        }
+        .message.warning {
+            color: #e74c3c;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+        .back-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h2>🧠 Prediction Result</h2>
+        <img src="{{ image_path }}" alt="Uploaded Image">
+        <p class="prediction"><strong>Class:</strong> {{ prediction }}</p>
+        <p class="confidence"><strong>Confidence:</strong> {{ confidence }}%</p>
+        <p class="message {% if prediction != 'no_tumor' %}warning{% endif %}">{{ message }}</p>
+
+        <a class="back-btn" href="/">🔁 Try Another Image</a>
+    </div>
+</body>
+</html>
