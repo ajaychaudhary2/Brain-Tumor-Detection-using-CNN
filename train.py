@@ -1,24 +1,17 @@
-# train.py
-
 import os
 import numpy as np
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from sklearn.utils.class_weight import compute_class_weight
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
-from model import build_model
+from model_builder import build_model
 
 # Dataset path
 data_dir = os.path.join('Data', 'Training')
 
-# Data augmentation
+# No data augmentation, only rescaling and validation split
 datagen = ImageDataGenerator(
     rescale=1./255,
-    validation_split=0.2,
-    rotation_range=15,
-    width_shift_range=0.1,
-    height_shift_range=0.1,
-    zoom_range=0.1,
-    horizontal_flip=True
+    validation_split=0.2  # 80% train, 20% validation
 )
 
 # Training data
