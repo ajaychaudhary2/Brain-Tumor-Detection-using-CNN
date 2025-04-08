@@ -50,20 +50,19 @@ Model Architecture:
 
 ## 📁 Project Structure
 
-Brain-Tumor-Detection-using-CNN/
-├── app.py                 # Flask web app
-├── predict.py             # Prediction logic (image preprocessing + model inference)
+📁 Brain-Tumor-Detection-using-CNN/
+├── app.py                  # Flask web app
+├── predict.py              # Prediction logic (image preprocessing + model inference)
 ├── model/
-│   └── saved_model/       # Trained CNN model (excluded from repo due to size)
+│   └── saved_model/        # Trained CNN model (excluded from repo due to size)
 ├── static/
-│   ├── uploads/           # Folder to store uploaded MRI scans
-│   └── demo/              # Demo image used in README
+│   ├── uploads/            # Folder to store uploaded MRI scans
+│   └── demo/               # Demo image used in README
 ├── templates/
-│   ├── index.html         # Upload interface
-│   └── result.html        # Prediction results display
-├── requirements.txt       # Python dependencies
-└── README.md              # You're here!
-
+│   ├── index.html          # Upload interface
+│   └── result.html         # Prediction results display
+├── requirements.txt        # Python dependencies
+└── README.md               # You're here!
 
 ---
 
