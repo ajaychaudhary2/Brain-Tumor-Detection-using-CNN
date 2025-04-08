@@ -9,7 +9,8 @@ A deep learning-based web app that detects brain tumors from MRI scans using a C
 Upload an MRI image and get instant predictions.  
 👇 Here's how it looks:
 
-![Prediction Result](static/Demo/img.png)
+![Prediction Result](https://private-user-images.githubusercontent.com/157147939/431199393-e860dfc8-8a6d-472e-aea1-21d661ca297b.png)
+
 
 ---
 
