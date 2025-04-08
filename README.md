@@ -47,46 +47,22 @@ Model Architecture:
 
 ---
 
-## 📁 Project Structure
-
-
----
-
-## 🧪 Training Summary
-
-| Metric              | Score     |
-|---------------------|-----------|
-| Training Accuracy   | ✅ 98.6%   |
-| Validation Accuracy | ✅ 96.3%   |
-| Loss                | 📉 0.054   |
-
-Model Architecture:
-- 2D Convolution Layers + ReLU
-- Max Pooling
-- Dropout Regularization
-- Fully Connected Dense Layers
-- Softmax Output Layer
-
----
-
-## 🧠 Tumor Classes Detected
-
-- Glioma Tumor
-- Meningioma Tumor
-- Pituitary Tumor
-- **No Tumor**
-
-> 🟢 If `No Tumor` is predicted:  
-> ✅ **No tumor in brain detected.**
-
-> 🔴 Otherwise:  
-> ⚠️ **Tumor detected:** _{Tumor Type}_
-
----
 
 ## 📁 Project Structure
 
-Brain-Tumor-Detection-using-CNN/ ├── app.py # Flask web app ├── predict.py # Prediction logic (image preprocessing + model inference) ├── model/ │ └── saved_model/ # Trained CNN model (excluded from repo due to size) ├── static/ │ └── uploads/ # Folder to store uploaded MRI scans │ └── demo/ # Demo image used in README ├── templates/ │ ├── index.html # Upload interface │ └── result.html # Prediction results display ├── requirements.txt # Python dependencies └── README.md 
+Brain-Tumor-Detection-using-CNN/
+├── app.py                 # Flask web app
+├── predict.py             # Prediction logic (image preprocessing + model inference)
+├── model/
+│   └── saved_model/       # Trained CNN model (excluded from repo due to size)
+├── static/
+│   ├── uploads/           # Folder to store uploaded MRI scans
+│   └── demo/              # Demo image used in README
+├── templates/
+│   ├── index.html         # Upload interface
+│   └── result.html        # Prediction results display
+├── requirements.txt       # Python dependencies
+└── README.md              # You're here!
 
 
 ---
